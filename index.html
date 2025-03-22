@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A website for displaying Google AdSense ads and monetizing content">
+    <meta name="keywords" content="adsense, advertising, monetization, content, website">
+    <link rel="icon" href="profile-user.png">
+    <title>Fixtionz</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Add your Google Fonts link or any other stylesheets here -->
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>FIXTIONZ</h1>
+    </header>
+    <section class="adsense">
+        <!-- Google AdSense Code -->
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <ins class="adsbygoogle"
+             style="display:block; text-align:center;"
+             data-ad-client="ca-pub-XXXXXX" <!-- Replace with your AdSense Publisher ID -->
+             data-ad-slot="XXXXXXX"        <!-- Replace with your AdSense Slot ID -->
+             data-ad-format="auto"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </section>
+
+    <!-- Main Content -->
+    <div class="featured-products">
+        <h2 class="shop-heading">Characters</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <a onclick="openModal('euphoriaPreWorkout')">
+                    <img src="guts.jpg" alt="Guts">
+                    <div class="product-info">
+                        <h3>GUTS <br>from (Berserk)</h3><br>
+                        <button class="shop-now" onclick="openModal('euphoriaPreWorkout')">VIEW</button>
+                    </div>
+                </a>
+            </div>
+
+            <div class="product-card">
+                <a onclick="openModal('creatine')">
+                    <img src="thofinn.jpg" alt="Thorfinn">
+                    <div class="product-info">
+                        <h3>Thorfinn<br>from (Vinland Saga)</h3>
+                        <button class="shop-now" onclick="openModal('creatine')">VIEW</button>
+                    </div>
+                </a>
+            </div>
+            
+            
+            <div class="product-card">
+                <a onclick="openModal('wheyProtein')">
+                    <img src="musashi.jpg" alt="Musashi">
+                    <div class="product-info">
+                        <h3>Musashi <br>from (Vagabond) </h3>
+                        <button class="shop-now" onclick="openModal('wheyProtein')">VIEW</button>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="product-card">
+                <a onclick="openModal('compressionTshirt')">
+                    <img src="david.jpg" alt="David Laid">
+                    <div class="product-info">
+                        <h3>David Laid<br>from (Gymshark)</h3>
+                        <button class="shop-now" onclick="openModal('compressionTshirt')">VIEW</button>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="modal" id="productModal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal()">&times;</span>
+                <div class="modal-info">
+                    <img src="" id="modal-img" alt="Product Image">
+                    <div>
+                        <h2 id="modal-title">Product Name</h2>
+                        <p id="modal-details">Product description here...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="about">
+        <h3>About</h3>
+        <p>This page is About <b style="color: rgb(255, 212, 133); text-shadow: 0px 0px 10px yellow;">Fictional</b> and 
+        <b style="color: rgb(255, 212, 133); text-shadow: 0px 0px 10px yellow;">Physical</b>,<br> Characters with there 
+        <br>One paragraph of Story.</p>
+        <p style="color:yellow">(For Entertainment Only)</p>
+    </section>
+    <section id="contact">          
+        <h3>Contact Me</h3>
+        <p>If you're interested message me if you want to see more Characters.</p>
+        <h3>Email</h3>
+        <p><img src="gmail.png" width="13px" height="13px"> Joshscz123@gmail.com</p>
+        <h3>Other App</h3>
+        <p><img src="social.png" width="13px" height="13px"> joshcaffeinated 
+        <img src="facebook.png" width="13px" height="13px"> Josh Mendoza</p>
+    </section>
+</main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 My AdSense Website. All rights reserved.</p>
+    </footer>
+
+<script>
+    function openModal(product) {
+        document.getElementById('productModal').style.display = "block";
+        // Update the modal content based on the product clicked
+         if (product === 'euphoriaPreWorkout') {
+            document.getElementById('modal-title').innerHTML = "Who is 'Guts'?";
+            document.getElementById('modal-details').innerHTML = "<h4>Guts</h4>The protagonist of Berserk, also has a life defined by trauma and revenge. Born from a dead woman and raised in a brutal environment, Guts becomes a mercenary under the mentorship of Gambino, a cruel man. He eventually joins the Band of the Hawk, led by the charismatic Griffith, but after a traumatic betrayal by Griffith, Guts is driven by a quest for vengeance. His life becomes a constant battle against demonic forces and the dark, cursed fate that haunts him. Guts is marked by an unyielding will to survive, fighting against both external enemies and his own inner demons. His story revolves around seeking revenge against Griffith, confronting the notion of fate, and trying to find some sense of peace in a world filled with suffering and chaos.";
+            document.getElementById('modal-img').src = "guts.jpg";
+         }
+            else if (product === 'creatine') {
+            document.getElementById('modal-title').innerHTML = "Who is 'Thorfinn'?";
+            document.getElementById('modal-details').innerHTML = "<h4>Thorfinn</h4>Starts as a young, vengeful warrior in Vinland Saga. He is the son of Thors, a former Viking warrior who sought a peaceful life but was killed by Askeladd, a cunning and ruthless leader. Consumed by anger and a desire for revenge, Thorfinn joins Askeladd's band of mercenaries and challenges him to duels, hoping to avenge his father. Over time, Thorfinn becomes disillusioned with the cycle of violence and the emptiness of revenge. As the series progresses, Thorfinn begins to question the true meaning of life, searching for a more peaceful path—especially after witnessing the horrors of war and realizing that a life of violence and revenge will only perpetuate suffering. His journey is about reconciling his past actions and finding a purpose beyond bloodshed, ultimately aspiring to live in a peaceful land known as Vinland.";
+            document.getElementById('modal-img').src = "thofinn.jpg";
+        }
+         if (product === 'wheyProtein') {
+            document.getElementById('modal-title').innerHTML = "Who is 'Musashi'?";
+            document.getElementById('modal-details').innerHTML = "<h4>Miyamoto Musashi</h4>Was a legendary swordsman in feudal Japan, known for his undefeated record in duels and his unorthodox two-sword fighting style. Born in 1584, Musashi’s early life was marked by violence and a thirst for battle, leading him to challenge and defeat numerous opponents from a young age. His most famous duel was with the swordsman Kojiro Sasaki in 1612, where Musashi's unconventional approach secured his victory. As he matured, Musashi shifted from being a fierce warrior to a more introspective philosopher, seeking deeper meaning in his life and martial arts. His later years were spent writing his influential treatise, The Book of Five Rings, which reflects his thoughts on strategy, warfare, and personal growth. Musashi's journey is one of constant self-discovery, mastery of the sword, and the pursuit of inner peace amidst a life of combat and strife.";
+            document.getElementById('modal-img').src = "musashi.jpg";
+        }  else if (product === 'compressionTshirt') {
+            document.getElementById('modal-title').innerHTML = "Who is 'David Laid'?";
+            document.getElementById('modal-details').innerHTML = "<h4>David Laid</h4>Is a popular fitness model, bodybuilder, and social media influencer known for his impressive transformation from a skinny teenager to a muscular physique. Gaining fame through platforms like Instagram and YouTube, he shares his fitness journey, workout routines, and motivational content, inspiring many to pursue their fitness goals. His dedication to bodybuilding and personal growth has earned him a large following, and he has collaborated with several fitness brands, becoming a well-known figure in the fitness community.";
+            document.getElementById('modal-img').src = "david1.jpg";
+        }
+    }
+
+
+    // Close the modal
+    function closeModal() {
+        document.getElementById('productModal').style.display = "none";
+    }
+        function toggleFAQ(faq) {
+            let answer = faq.querySelector('.faq-answer');
+            let sign = faq.querySelector('.faq-icon');
+            
+            if (answer.style.display === 'block') {
+                answer.style.display = 'none';
+            } else {
+                answer.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
